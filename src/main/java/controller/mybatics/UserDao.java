@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Mapper
 @Component(value = "userDao")
 public interface UserDao {
 
