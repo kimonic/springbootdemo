@@ -91,6 +91,27 @@ public class StudyRecord {
      *
      *  连接并访问数据库参见DataController.java文件
      *
+     * 006 spring boot 整合mybatics  纯java
+     * 在pom.xml文件中添加
+     *          <!--集成mybatics-->
+     *         <!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
+     *         <dependency>
+     *             <groupId>org.mybatis.spring.boot</groupId>
+     *             <artifactId>mybatis-spring-boot-starter</artifactId>
+     *             <version>1.3.2</version>
+     *         </dependency>
+     *
+     *         <!--集成mybatics-->
+     *  在resources文件夹下的application.properties文件中配置数据库链接
+     *
+     *  007 解决mybatics接口类@Mapper注入失败的问题
+     *   在启动类SpringbootdemoApplication下添加@MapperScan("@Mapper所在的包名")注解
+     *   http://www.cnblogs.com/zqr99/p/8677642.html
+     *
+     *
+     *  008  解决@mapper接口类添加@autowired注解时提示
+     *  Could not autowire. No beans of 'UserDao' type found
+     *  在@Mapper接口类上添加注解@Component即可
      *
      *
      */
