@@ -87,6 +87,14 @@
 
         <!--集成mybatics-->
 
+        <!--自动编译jsp文件-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional> <!-- 表示依赖不会传递 -->
+        </dependency>
+        <!--自动编译jsp文件-->
+
     </dependencies>
 
     <build>
@@ -94,6 +102,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork> <!-- 如果没有该配置，devtools不会生效 -->
+                </configuration>
             </plugin>
         </plugins>
     </build>

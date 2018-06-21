@@ -13,6 +13,16 @@ public class StudyRecord {
      *         <!--http://maven.outofmemory.cn/javax.inject/javax.inject/1/-->
      *         <!--http://mvnrepository.com-->
      *
+     *      * 001 教程地址
+     *      * 002 404错误
+     *      *  003 springboot中访问静态资源界面 html,css等
+     *      *  004  springboot中访问jsp页面
+     *      * 005 springboot 访问数据库
+     *      * 006 spring boot 整合mybatics  纯java
+     *      *  007 解决mybatics接口类@Mapper注入失败的问题
+     *      *  008  解决@mapper接口类添加@autowired注解时提示
+     *      *  009 解决mysql数据库密码错误问题
+     *
      *
      * 001 教程地址
      *  https://www.zhihu.com/question/53729800
@@ -100,7 +110,6 @@ public class StudyRecord {
      *             <artifactId>mybatis-spring-boot-starter</artifactId>
      *             <version>1.3.2</version>
      *         </dependency>
-     *
      *         <!--集成mybatics-->
      *  在resources文件夹下的application.properties文件中配置数据库链接
      *
@@ -114,5 +123,42 @@ public class StudyRecord {
      *  在@Mapper接口类上添加注解@Component即可
      *
      *
+     *  009 解决mysql数据库密码错误问题
+     *  重置mysql数据库密码
+     *  my.ini文件将文件加设置为显示所有文件后在文件夹programdata文件夹内查看
+     *  https://dev.mysql.com/doc/refman/8.0/en/resetting-permissions.html
+     *  原链接数据库需要先断开链接后重新链接
+     *  C:\Program Files\MySQL\MySQL Server 8.0\bin目录下启动命令行执行
+     *  mysqld -install 可能会导致数据库文件全部被删除--不确定!!!
+     *  添加mybatics后导致数据库链接异常并致使数据库数据全部被删除,不确定!!!
+     *
+     *
      */
+    public void aaa(){
+
+    }
+
+    public void bbb(){
+        /**
+         * 010 解决springboot jsp文件需要重启服务器的问题
+         * https://blog.csdn.net/u013042707/article/details/78648259
+         *
+         * Setting--->Compiler--->勾选Build project automatically
+         *
+         * pom.xml中添加
+         * <dependency>
+         *    <groupId>org.springframework.boot</groupId>
+         *    <artifactId>spring-boot-devtools</artifactId>
+         *    <optional>true</optional> <!-- 表示依赖不会传递 -->
+         * </dependency>
+         *
+         * <plugin>
+         *    <groupId>org.springframework.boot</groupId>
+         *    <artifactId>spring-boot-maven-plugin</artifactId>
+         *    <configuration>
+         *       <fork>true</fork> <!-- 如果没有该配置，devtools不会生效 -->
+         *    </configuration>
+         * </plugin>
+         */
+    }
 }

@@ -16,8 +16,8 @@ public class UserService{
         return userDao.findAll();
     }
 
-    public int insertNew(String name) {
-        return userDao.insertNew(name);
+    public int insertNew(String name,String password,int age) {
+        return userDao.insertNew(name,password,age);
     }
 
     /**

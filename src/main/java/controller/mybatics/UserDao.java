@@ -12,10 +12,11 @@ import java.util.List;
 @Component(value = "userDao")
 public interface UserDao {
 
-    @Select("select * from user")
+    @Select("select * from users")
     List<User> findAll();
 
-    @Insert("insert into user(name) values(#{name})")
-    int insertNew(@Param("name") String name);
+    @Insert("insert into users(name,password,age) values(#{name},#{password},#{age})")
+    int insertNew(@Param("name") String name,@Param("password") String passwor,
+                  @Param("age") int age);
 
 }

@@ -20,8 +20,8 @@ public class UserController {
 
 
     @RequestMapping("/insert")
-    public int testInsert(){
-        return userService.insertNew("mybatics");
+    public int testInsert(String name,String password,int age){
+        return userService.insertNew(name,password,age);
     }
 
 
