@@ -20,6 +20,10 @@ public class UserService{
         return userDao.insertNew(name,password,age);
     }
 
+
+    public int find(String name ,String password){
+        return userDao.find(name,password).size();
+    }
     /**
      *   @Autowired
      *     private HappinessDao happinessDao;

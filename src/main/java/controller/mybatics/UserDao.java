@@ -19,4 +19,7 @@ public interface UserDao {
     int insertNew(@Param("name") String name,@Param("password") String passwor,
                   @Param("age") int age);
 
+    @Select("select * from users where name=#{name} and password=#{password}")
+    List<User> find(@Param("name")String name,@Param("password")String password);
+
 }
