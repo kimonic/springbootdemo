@@ -27,7 +27,14 @@ public class StudyRecord {
         aab();
         //011 jquery mobile学习教程
         aac();
+//        012 IDEA配置MySQL数据库报以下错误：
+        aad();
+//        013 Failed to start component [Connector[HTTP/1.1-8080]],导致springboot内置tomcat无法启动
+        aae();
+
     }
+
+
 
     public void aaa() {
         /**
@@ -196,4 +203,30 @@ public class StudyRecord {
          * http://www.runoob.com/jquerymobile/jquerymobile-pages.html
          */
     }
+
+    public void aad(){
+        /**
+         *  012 IDEA配置MySQL数据库报以下错误：
+         *
+         *  https://blog.csdn.net/sjmz30071360/article/details/80108758
+         *
+         *  问题原因：
+         *
+         * 本地安装的MySQL版本为5.7版本，IDEA默认选用的Driver files为最新版本
+         *该原因描述与我的实际情况不符,但是将mysql驱动程序由idea自动选择后,问题确实解决
+         * 问题解决：
+         *
+         * 将Driver files设置为低版本即可连接成功！！！
+         */
+    }
+
+    public void aae() {
+
+        /**
+         * 013  Failed to start component [Connector[HTTP/1.1-8080]],导致springboot内置tomcat无法启动
+         *
+         * 查看任务管理器内是否有多个正在运行的java.exe进程,或者tomcat的进程,有则结束掉,重新启动即可
+         */
+    }
+
 }
