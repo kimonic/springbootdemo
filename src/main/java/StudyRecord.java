@@ -3,7 +3,19 @@
  */
 
 public class StudyRecord {
-
+    /**
+     * https://www.zhihu.com/question/19716589
+     * 程序员客栈  https://www.proginn.com/
+     * 猿急送  http://www.yuanjisong.com/
+     * 码市 https://mart.coding.net/
+     * 大鲲 https://pro.lagou.com/
+     * 自客 http://www.zike.com/
+     * 极牛 http://geekniu.com/
+     * 人人开发 http://rrkf.com/
+     * 实现网 https://shixian.com/
+     * 猪八戒网 http://www.zbj.com/
+     * 威客 http://www.epwk.com/
+     */
     public void catalog() {
         //001 教程地址
         aaa();
@@ -41,6 +53,8 @@ public class StudyRecord {
          *
          * 主页本地访问地址
          * http://localhost:8080/index
+         * 手机真机云测试网站
+         * http://wetest.qq.com/cloud/help/AndroidP?from=adsout_WTbanner_androidP
          *
          *
          *  <!--maven仓库查找网站-->

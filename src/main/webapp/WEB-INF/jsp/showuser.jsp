@@ -9,12 +9,12 @@
     <meta charset="utf-8">
 </head>
 <body>
-<%
-    List<User> list= (List<User>) request.getAttribute("add");
-    for (int i = 0; i < list.size(); i++) {
-        out.println(list.get(i).getName());
-    }
-%>
-
+<%--<%--%>
+    <%--List<User> list= (List<User>) request.getAttribute("add");--%>
+    <%--for (int i = 0; i < list.size(); i++) {--%>
+        <%--out.println(list.get(i).getName());--%>
+    <%--}--%>
+<%--%>--%>
+dwsdsadsdsd
 </body>
 </html>

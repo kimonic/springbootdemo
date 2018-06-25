@@ -20,7 +20,7 @@
             padding-top: 10px;
             padding-bottom: 10px;
             background-color: orange;
-            width: 60%
+            width: 1000px
         }
 
         .sidebyside {
@@ -36,7 +36,7 @@
         }
 
         .loginstyle {
-            width: 80px;
+            width: 90px;
             display: inline-block;
             margin-top: 10px;
             text-align: right;
@@ -156,7 +156,7 @@
                 // 因此，如果时把函数作为参数进行值传递时，通常不需要加括号，只是把它当做一个函数指针；
                 // 但是如果要进行函数调用的时候，
                 // 由于是想要得到函数的返回值，因此必须要加上括号。
-                var loader = new net.AjaxRequest('/login?name=' + name+'&password='+password,
+                var loader = new net.AjaxRequest('/login?name=' + name + '&password=' + password,
                     deal_getinfo, onError, "POST");
 
             }
@@ -189,7 +189,7 @@
         <label><a href="">寻找知音</a>
         </label>
     </div>
-    <div style="width: 60%">
+    <div style="width:1000px">
         <div class="sidebyside" style="width: 70%;" id="imgchangediv">
             <div style="margin: 20px;border: 1px solid #CCCCCC;padding: 5px">
                 <img src="http://img.juzimi.com/juzimi/images/juzimib1_s1.jpg" style="display: block;" alt=""/>
@@ -205,12 +205,31 @@
                     <font></font>
                 </div>
             </div>
+            <div style="text-align: left;margin-left: 20px;">
+               <span style="color: white;border-top-left-radius: 5px;border-top-right-radius: 5px;
+               background-color: #FDB051;padding: 0px 10px 3px 10px">他们在分享</span>
+            </div>
+            <div style="border:1px solid #CCCCCC;margin: 0px 20px;height: 200px; ">
 
+            </div>
+
+            <div style="border:1px solid #CCCCCC;margin: 20px;height: 200px; ">
+
+            </div>
+            <div style="border:1px solid #CCCCCC;margin: 20px;height: 200px; ">
+
+            </div>
+            <div style="border:1px solid #CCCCCC;margin: 20px;height: 200px; ">
+
+            </div>
+            <div style="border:1px solid #CCCCCC;margin: 20px;height: 200px; ">
+
+            </div>
 
         </div>
 
         <div class="sidebyside" style="width: 30%;height: 1000px;">
-            <div style="align-content: center;margin: 10px;border: 1px solid #CCCCCC">
+            <div style="text-align: center;margin: 10px;border: 1px solid #CCCCCC">
                 <form action="/login" method="post">
                     <label class="loginstyle">邮箱账号: &nbsp; </label><input type="text" name="name" id="name"
                                                                           placeholder="请输入用户名邮箱"><br>
@@ -226,7 +245,9 @@
                     </div>
                 </form>
             </div>
+            <div style="border:1px solid #CCCCCC;margin: 10px;height: 1000px; ">
 
+            </div>
         </div>
     </div>
 
