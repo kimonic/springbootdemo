@@ -43,9 +43,28 @@ public class StudyRecord {
         aad();
 //        013 Failed to start component [Connector[HTTP/1.1-8080]],导致springboot内置tomcat无法启动
         aae();
-
+        //014 解决自动生成get  set方法时为private的问题
+        aaf();
+        //015 main--java文件夹下的类无法直接引用
+        aag();
     }
 
+    private void aag() {
+        /**
+         * 015 main--java文件夹下的类无法直接引用
+         * 需要在java文件夹下新建包内的类才可以引用
+         */
+    }
+
+
+    private void aaf() {
+        /**
+         * 014 解决自动生成get  set方法时为private的问题
+         *
+         * file--settings--editor--code style --javaa--code generation--default  visibility
+         * 中修改
+         */
+    }
 
 
     public void aaa() {

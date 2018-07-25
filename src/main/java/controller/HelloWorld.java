@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloWorld {
     @RequestMapping("/")
     public String say(){
+
         return "Hello World!";
     }
 

@@ -258,6 +258,7 @@
     <%--<a href="http://localhost:8080/html/hello.html">访问静态heml页面</a><br><br>--%>
     <%--<a href="/html/hello.html">访问静态heml页面,无主机地址</a>--%>
     <%--<form action="/index1" method="post">--%>
+    \jsp\index.jsp
     <%--请输入用户名: <input type="text" id="name" name="name"><br>--%>
     <%--请输入密码:<input type="password" id="password" name="password"><br>--%>
     <%--请输入年龄: <input type="text" id="age" name="age"><br>--%>
