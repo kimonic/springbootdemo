@@ -1,6 +1,12 @@
 package trytest;
 
+import org.apache.catalina.connector.CoyoteAdapter;
 import org.omg.CORBA.TRANSIENT;
+import org.springframework.beans.BeanWrapper;
+import org.springframework.beans.factory.xml.NamespaceHandlerSupport;
+import org.springframework.context.EnvironmentAware;
+import org.springframework.web.servlet.DispatcherServlet;
+import org.springframework.web.servlet.HttpServletBean;
 import sun.misc.ProxyGenerator;
 import sun.reflect.misc.ReflectUtil;
 
@@ -1743,33 +1749,44 @@ public class TestUnicode {
      * }
      */
     private static void aaa() {
-        int a=-1;
-        int b=2;
-        int c=~a;//取反
-        int d=a^b;//异或
-        int e=a&b;//与
-        int f=a>>1;//右移(有符号)  空位补0
-        int g=a<<1;//左移 空位补0
-        int h=a>>>1;//无符号右移
-        System.out.println("a--"+Integer.toBinaryString(a));
-        System.out.println("b--"+Integer.toBinaryString(b));
-        System.out.println("c--"+Integer.toBinaryString(c));
-        System.out.println("c--"+Integer.toBinaryString(-100));
-        System.out.println("c--"+Integer.toBinaryString(100));
-        System.out.println("d--"+Integer.toBinaryString(d));
-        System.out.println("e--"+Integer.toBinaryString(e));
-        System.out.println("f--"+Integer.toBinaryString(f));
-        System.out.println("g--"+Integer.toBinaryString(g));
-        System.out.println("h--"+Integer.toBinaryString(h));
-
-        System.out.println("a--"+a);
-        System.out.println("b--"+b);
-        System.out.println("c--"+c);
-        System.out.println("d--"+d);
-        System.out.println("e--"+e);
-        System.out.println("f--"+f);
-        System.out.println("g--"+g);
-        System.out.println("h--"+h);
-
+//        int a=-1;
+//////        int b=2;
+//////        int c=~a;//取反
+//////        int d=a^b;//异或
+//////        int e=a&b;//与
+//////        int f=a>>1;//右移(有符号)  空位补0
+//////        int g=a<<1;//左移 空位补0
+//////        int h=a>>>1;//无符号右移
+//////        System.out.println("a--"+Integer.toBinaryString(a));
+//////        System.out.println("b--"+Integer.toBinaryString(b));
+//////        System.out.println("c--"+Integer.toBinaryString(c));
+//////        System.out.println("c--"+Integer.toBinaryString(-100));
+//////        System.out.println("c--"+Integer.toBinaryString(100));
+//////        System.out.println("d--"+Integer.toBinaryString(d));
+//////        System.out.println("e--"+Integer.toBinaryString(e));
+//////        System.out.println("f--"+Integer.toBinaryString(f));
+//////        System.out.println("g--"+Integer.toBinaryString(g));
+//////        System.out.println("h--"+Integer.toBinaryString(h));
+//////
+//////        System.out.println("a--"+a);
+//////        System.out.println("b--"+b);
+//////        System.out.println("c--"+c);
+//////        System.out.println("d--"+d);
+//////        System.out.println("e--"+e);
+//////        System.out.println("f--"+f);
+//////        System.out.println("g--"+g);
+//////        System.out.println("h--"+h);
+//        System.out.println(""+Integer.toBinaryString(0<<30));
+//        System.out.println(""+Integer.toBinaryString(1<<30));
+//        System.out.println(""+Integer.toBinaryString(2<<30));
+//        System.out.println(""+Integer.toBinaryString(3<<30));
+//        System.out.println(""+Integer.toBinaryString(~(3<<30)));
+//        System.out.println(""+Integer.toBinaryString(1000& (~(3<<30))));
+//        System.out.println(""+(1000& ~(3<<30)));
+//        System.out.println(""+Integer.toBinaryString(1000));
+        int MODE_SHIFT = 30;
+        int MODE_MASK  = 0x3 << MODE_SHIFT;
+        System.out.println(""+MODE_SHIFT);
+        System.out.println(""+MODE_MASK);
     }
 }

@@ -47,6 +47,15 @@ public class StudyRecord {
         aaf();
         //015 main--java文件夹下的类无法直接引用
         aag();
+        //016 mysql 启动错误 code 2003
+        aah();
+    }
+
+    private void aah() {
+        /**
+         * 016 mysql 启动错误 code 2003
+         * 在命令行中输入  net start mysql启动成功后即可
+         */
     }
 
     private void aag() {
