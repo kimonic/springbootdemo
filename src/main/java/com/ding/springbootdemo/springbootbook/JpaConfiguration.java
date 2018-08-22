@@ -1,5 +1,6 @@
 package com.ding.springbootdemo.springbootbook;
 
+import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -7,7 +8,10 @@ import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import javax.sql.DataSource;
 
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @Configuration
@@ -19,6 +23,8 @@ public class JpaConfiguration {
     PersistenceExceptionTranslationPostProcessor persistenceExceptionTranslationPostProcessor(){
         return new PersistenceExceptionTranslationPostProcessor();
     }
+
+
     /**
      * Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException:
      * No qualifying bean of type 'com.ding.springbootdemo.springbootbook.UserRepository'
@@ -97,7 +103,7 @@ public class JpaConfiguration {
  *     }
  *
  *
- *https://www.concretepage.com/questions/555
+ *  https://www.concretepage.com/questions/555
  *     @Configuration
  * @EnableJpaRepositories("com.myproject.repository")
  * @EnableTransactionManagement

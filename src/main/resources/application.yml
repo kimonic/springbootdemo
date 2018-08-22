@@ -1,0 +1,48 @@
+#跟路径只有一个,不能重复
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: UTF-8
+spring:
+  thymeleaf:
+    # 配置视图路径前缀
+    prefix: classpath:/templates/
+    # 配置视图路径后缀
+    suffix: .html
+    mode: html
+    # 关闭缓存 修改视图 刷新浏览器就显示 开发阶段务必关闭缓存 (=false)
+    cache: false
+    encoding: utf-8
+    servlet:
+      content-type: text/html
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=GMT&useSSL=false&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: dingzhixin
+    #com.mysql.cj.jdbc.Driver驱动读取不到
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  freemarker:
+      request-context-attribute: req  #req访问request
+      suffix: .ftl  #后缀名
+      content-type: text/html
+      enabled: true
+      cache: false #缓存配置
+      template-loader-path: classpath:/templates/ #模板加载路径 按需配置
+      charset: UTF-8 #编码格式
+      settings:
+        number_format: '0.##'   #数字格式化，无小数点
